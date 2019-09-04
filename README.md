@@ -1,4 +1,4 @@
-# tweeps
+# Tweeps
 
 Analytics IOS App build for Twiiter Platform . With a few simple clicks you can easily check your: Unfollowers, Inactive, Following, Fans, Friends, Blocked and so much more.
 Keep track of your Twitter account, manage the way you interact. Get daily statistics. 
