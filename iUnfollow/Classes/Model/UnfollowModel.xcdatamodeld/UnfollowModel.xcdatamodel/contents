@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A598" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Tweet" representedClassName="Tweet" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tweetId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mentioner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="tweetsMentioningUser" inverseEntity="TwitterUser" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="tweets" inverseEntity="TwitterUser" syncable="YES"/>
+    </entity>
+    <entity name="TwitterUser" representedClassName="TwitterUser" syncable="YES">
+        <attribute name="biography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blocked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="didTweet" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="followed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="following" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasDefaultImg" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="isUnfollower" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastFollowedOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastFollowingOn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastTweetDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="numFavourites" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numFollowers" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numFollowing" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numTweets" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="profileBackgroundUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screenName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="websiteUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mentionedInTweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserTweet" inverseName="mentions" inverseEntity="UserTweet" syncable="YES"/>
+        <relationship name="retweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserTweet" inverseName="retweeters" inverseEntity="UserTweet" syncable="YES"/>
+        <relationship name="tweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweet" inverseName="user" inverseEntity="Tweet" syncable="YES"/>
+        <relationship name="tweetsMentioningUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweet" inverseName="mentioner" inverseEntity="Tweet" syncable="YES"/>
+        <relationship name="userRetweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserTweet" inverseName="retweetedFrom" inverseEntity="UserTweet" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="biography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoritesNo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="followersNo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="followingNo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileBackgroundUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tweetsNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserTweet" inverseName="user" inverseEntity="UserTweet" syncable="YES"/>
+    </entity>
+    <entity name="UserTweet" representedClassName="UserTweet" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="hasImage" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasVideo" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="retweetCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tweetId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="userIdentifier" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mentions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="mentionedInTweets" inverseEntity="TwitterUser" syncable="YES"/>
+        <relationship name="retweetedFrom" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="userRetweets" inverseEntity="TwitterUser" syncable="YES"/>
+        <relationship name="retweeters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="retweets" inverseEntity="TwitterUser" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tweets" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tweet" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TwitterUser" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="User" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="UserTweet" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

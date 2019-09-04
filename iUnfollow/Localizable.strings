@@ -1,0 +1,167 @@
+/* 
+  Localizable.strings
+  iUnfollow
+
+  Created by Laura Michaud on 4/7/13.
+  Copyright (c) 2013 Digital Krikits. All rights reserved.
+*/
+"Select All" = "Select All";
+
+
+"Deselect all" = "Deselect all";
+
+
+"Following" = "Following";
+
+
+"Non-followers" = "Non-followers";
+
+
+"Unfollow selected" = "Unfollow selected";
+
+
+"UNFOLLOW ALL" = "UNFOLLOW ALL";
+
+
+"Back" = "Back";
+
+
+"Recent history" = "Recent history";
+
+
+"There is currently no history to show" = "There is currently no history to show";
+
+
+"Cancel follow request" = "Cancel follow request";
+
+
+"Now following" = "Now following";
+
+
+"Following you" = "Following you";
+
+
+"Now unfollowing" = "Now unfollowing";
+
+
+"Unfollowing you" = "Unfollowing you";
+
+
+"N/A" = "N/A";
+
+
+"Close" = "Close";
+
+
+"Recent's Statistics" = "Recent's Statistics";
+
+
+"All-time Statistics" = "All-time Statistics";
+
+
+"Show recent history" = "Show recent history";
+
+
+"Notify me via twitter when someone Follows me" = "Notify me via twitter when someone Follows me";
+
+
+"Tweets" = "Tweets";
+
+
+"Following" = "Following";
+
+
+"Followers" = "Followers";
+
+
+"Favorites" = "Favorites";
+
+
+"Accounts" = "Accounts";
+
+
+"Unfollow" = "Unfollow";
+
+
+"Updating list of following and calculating stats. Please wait..." = "Updating list of following and calculating stats. Please wait...";
+
+
+"Updating list of non-followers and calculating stats. Please wait..." = "Updating list of non-followers and calculating stats. Please wait...";
+
+
+"Unfollow all remove any of your followings that isn't following you back! Press \"Unfollow ALL\" to confirm" = "Unfollow all remove any of your followings that isn't following you back! Press \"Unfollow ALL\" to confirm";
+
+
+"Cancel" = "Cancel";
+
+
+"Unfollow ALL" = "Unfollow ALL";
+
+
+"Don't ask me again" = "Don't ask me again";
+
+
+"Are you sure you want to unfollow those users?" = "Are you sure you want to unfollow those users?";
+
+
+"My profile" = "My profile";
+
+
+"Please select the twitter account you want to sign in with. You can use the app to manage multiple accounts from the profile screen" = "Please select the twitter account you want to sign in with. You can use the app to manage multiple accounts from the profile screen";
+ 
+
+"Choose an account" = "Choose an account";
+
+
+"No website" = "No website"; 
+
+
+"Getting your info" = "Getting your info";
+
+
+"Warning" = "Warning";
+
+
+"Ok" = "Ok";
+
+
+"The page requested does not exist" = "The page requested does not exist";
+
+
+"Could not connect to Twitter" = "Could not connect to Twitter";
+
+
+"There is a request limit per 15 minutes and you reached it! Please retry after 15 minutes" = "There is a request limit per 15 minutes and you reached it! Please retry after 15 minutes";
+
+
+"Don't tell me again" = "Don't tell me again";
+
+
+"Previous unfollow still in progress" = "Previous unfollow still in progress";
+
+
+"Success" = "Success";
+
+
+"unfollowed on" = "unfollowed on";
+
+
+"as requested!" = "as requested!";
+
+
+"Unable to start unfollowing the user you have selected" = "Unable to start unfollowing the user you have selected";
+
+
+"No users selected" = "No users selected";
+
+
+"No twitter account set or last account is no longer available" = "No twitter account set or last account is no longer available";
+ 
+
+"Your device doesn't seem to be connected to any internet network" = "Your device doesn't seem to be connected to any internet network";
+
+
+"Please try again later" = "Please try again later";
+
+
+"Pending" = "Pending";
